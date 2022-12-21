@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-public class Bank {
-=======
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,5 +20,5 @@ public class Bank {
     public Account getAccount(String name) {
         return accounts.get(name);
     }
->>>>>>> Initial commit
 }
+
