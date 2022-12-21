@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class BankAppGui extends JFrame{
 
-private BankFacade facade;
+private BankAppl facade;
 private JTextField balanceField;
 private JTextField amountField;
 private JTextField fromField;
@@ -19,7 +19,7 @@ private JButton transferButton;
 private JButton payBillButton;
 private JButton balanceButton;
 
-public BankAppGui(BankFacade facade) {
+public BankAppGui(BankAppl facade) {
         this.facade = facade;
 
         // Set the title and layout of the frame

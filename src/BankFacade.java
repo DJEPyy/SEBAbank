@@ -1,28 +1,19 @@
 public class BankFacade {
-    private Bank bank;
+  private BankAppl facade;
 
-    public BankFacade(Bank bank) {
-        this.bank = bank;
-    }
+  public BankFacade(BankAppl facade) {
+    this.facade = facade;
+  }
 
+  public void transfer(String fromAccountName, String toAccountName, double amount) {
+    facade.transfer(fromAccountName, toAccountName, amount);
+  }
 
-    public void createAccount(String name, double balance) {
-        bank.createAccount(name, balance);
-    }
+  public void payBill(String accountName, double amount) {
+    facade.payBill(accountName, amount);
+  }
 
-    public void transfer(String fromAccountName, String toAccountName, double amount) {
-        Account fromAccount = bank.getAccount(fromAccountName);
-        Account toAccount = bank.getAccount(toAccountName);
-        fromAccount.withdraw(amount);
-        toAccount.deposit(amount);
-    }
-
-    public void payBill(String accountName, double amount) {
-        Account account = bank.getAccount(accountName);
-        account.withdraw(amount);
-    }
-
-    public double getBalance(String accountName) {
-        Account account = bank.getAccount(accountName);
-        return account.getBalance();
-    }}
+  public double getBalance(String accountName) {
+    return facade.getBalance(accountName);
+  }
+}
