@@ -1,5 +1,6 @@
 public class BankAppl {
     private Bank bank;
+    private Account account;
 
     public BankAppl(Bank bank) {
         this.bank = bank;
@@ -25,4 +26,15 @@ public class BankAppl {
     public double getBalance(String accountName) {
         Account account = bank.getAccount(accountName);
         return account.getBalance();
-    }}
+    }
+
+    public void deposit(String accountName, double amount) {
+        Account account = bank.getAccount(accountName);
+        account.deposit(amount);
+    }
+
+    public void withdraw(String accountName, double amount) {
+        Account account = bank.getAccount(accountName);
+        account.withdraw(amount);
+    }
+}

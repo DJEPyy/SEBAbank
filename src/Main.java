@@ -3,9 +3,8 @@ public class Main {
     Bank bank = new Bank();
     BankAppl bankAppl = new BankAppl(bank);
     BankFacade facade = new BankFacade(bankAppl);
-    BankAppGui gui = new BankAppGui(bankAppl);
+    BankAppGui gui = new BankAppGui(facade);
     gui.setVisible(true);
-    gui.setSize(400, 200);
-
+    gui.setSize(600, 150);
   }
 }

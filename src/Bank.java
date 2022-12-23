@@ -11,10 +11,8 @@ public class Bank {
 
     public void createAccount(String name, double balance) {
         accounts.put(name, new Account(balance));
-    }
-
-    public void addAccount(String name, Account account) {
-        accounts.put(name, account);
+        System.out.println("Account created: " + name);
+        System.out.println(accounts.size());
     }
 
     public Account getAccount(String name) {
